@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.57.4",
+    "@peculiar/x509": "npm:@peculiar/x509@1.12.3"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "manifest": {
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "locales": {
+        "es-MX": {
+          "name": "Alexa using IA",
+          "summary": "Asistente de inteligencia artificial personal.",
+          "description": "Asistente privado conectado a Supabase para conversar, guardar notas y administrar recordatorios.",
+          "examplePhrases": [
+            "Alexa, abre mi asistente",
+            "Alexa, dile a mi asistente que explique la fotosíntesis",
+            "Alexa, pregunta a mi asistente qué puedo cocinar hoy"
+          ],
+          "keywords": ["asistente", "inteligencia artificial", "notas", "recordatorios"]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Skill privada en desarrollo.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": ["AR"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "https://YOUR_PROJECT_REF.supabase.co/functions/v1/alexa-webhook"
+        },
+        "interfaces": []
+      }
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
+  }
+}

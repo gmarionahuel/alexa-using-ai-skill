@@ -1,0 +1,293 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi asistente",
+      "intents": [
+        {
+          "name": "AskIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "pregunta {query}",
+            "decime {query}",
+            "dime {query}",
+            "quiero saber {query}",
+            "consulta {query}",
+            "explícame {query}",
+            "fijate {query}",
+            "fíjate {query}",
+            "analiza {query}",
+            "analizá {query}",
+            "averigua {query}",
+            "averiguá {query}",
+            "contame {query}",
+            "cuéntame {query}",
+            "busca {query}",
+            "buscá {query}",
+            "investiga {query}",
+            "investigá {query}",
+            "revisa {query}",
+            "revisá {query}",
+            "decime algo sobre {query}",
+            "quiero preguntarte {query}"
+          ]
+        },
+        {
+          "name": "WhyIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "por qué {query}"
+          ]
+        },
+        {
+          "name": "WhenIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cuándo {query}"
+          ]
+        },
+        {
+          "name": "WhatIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "qué {query}"
+          ]
+        },
+        {
+          "name": "WhoIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "quién {query}"
+          ]
+        },
+        {
+          "name": "WhereIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "dónde {query}"
+          ]
+        },
+        {
+          "name": "HowIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cómo {query}"
+          ]
+        },
+        {
+          "name": "WhichIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cuál {query}"
+          ]
+        },
+        {
+          "name": "TellIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "contame sobre {query}",
+            "háblame de {query}"
+          ]
+        },
+        {
+          "name": "NewsIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "noticias de {query}",
+            "últimas noticias de {query}",
+            "qué pasó con {query}",
+            "qué hay de nuevo sobre {query}",
+            "poneme al día sobre {query}"
+          ]
+        },
+        {
+          "name": "CryptoPriceIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cuánto vale {query}",
+            "precio de la cripto {query}",
+            "precio de la criptomoneda {query}",
+            "a cuánto está la cripto {query}"
+          ]
+        },
+        {
+          "name": "StockPriceIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cotización de {query}",
+            "a cuánto cotiza {query}",
+            "precio de la acción {query}",
+            "cómo cerró la acción {query}"
+          ]
+        },
+        {
+          "name": "SportsScheduleIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cuándo juega {query}",
+            "a qué hora juega {query}",
+            "contra quién juega {query}",
+            "próximo partido de {query}"
+          ]
+        },
+        {
+          "name": "SportsResultIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "cómo salió {query}",
+            "cuánto salió {query}",
+            "resultado de {query}",
+            "último resultado de {query}"
+          ]
+        },
+        {
+          "name": "ReadUrlIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "lee esta página {query}",
+            "leé esta página {query}",
+            "revisa esta dirección {query}",
+            "resume esta página {query}"
+          ]
+        },
+        {
+          "name": "ContinueIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "sí {query}",
+            "sí quería saber {query}",
+            "sí quiero saber {query}",
+            "y {query}",
+            "y también {query}",
+            "también {query}",
+            "también quiero saber {query}",
+            "además {query}",
+            "bueno {query}",
+            "entonces {query}",
+            "ahora {query}",
+            "otra cosa {query}",
+            "de paso {query}",
+            "siguiendo con eso {query}",
+            "sobre eso {query}",
+            "respecto de eso {query}",
+            "en ese caso {query}",
+            "perfecto {query}",
+            "ok {query}",
+            "dale {query}",
+            "claro {query}",
+            "igual {query}",
+            "pero {query}",
+            "después {query}",
+            "antes {query}",
+            "también decime {query}",
+            "quiero preguntarte {query}"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}
