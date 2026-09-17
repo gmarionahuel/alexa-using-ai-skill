@@ -509,19 +509,23 @@ async function answerWithGroq(
   if (!answer) throw new Error("empty_groq_response");
   await reportApiKey(supabase, route.key_id, true, 200);
 
-  await supabase.from("execution_logs").insert({
-    request_id: envelope.request?.requestId,
-    request_type: "IntentRequest",
-    provider: APP_CONFIG.llmProvider,
-    model: APP_CONFIG.llmModel,
-    status: "succeeded",
-    latency_ms: Date.now() - startedAt,
-    metadata: {
-      provider_latency_ms: Date.now() - providerStartedAt,
-      tool_name: toolName,
-      tool_used: toolName !== null,
-    },
-  });
+  // Successful plain LLM requests are intentionally not persisted. They add
+  // little diagnostic value and would make the log table grow on every turn.
+  if (toolName !== null) {
+    await supabase.from("execution_logs").insert({
+      request_id: envelope.request?.requestId,
+      request_type: "IntentRequest",
+      provider: APP_CONFIG.llmProvider,
+      model: APP_CONFIG.llmModel,
+      status: "succeeded",
+      latency_ms: Date.now() - startedAt,
+      metadata: {
+        provider_latency_ms: Date.now() - providerStartedAt,
+        tool_name: toolName,
+        tool_used: true,
+      },
+    });
+  }
 
   return alexaResponse(`${answer} ¿Algo más?`, false, {
     last_question: question.slice(0, 600),
