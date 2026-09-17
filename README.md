@@ -11,6 +11,7 @@ Custom Skill de Alexa conectada a una Supabase Edge Function para conversar con 
 - Contexto breve mediante `sessionAttributes`, sin persistir conversaciones por defecto.
 - Modelo de interacción para español de México con expresiones naturales.
 - Presupuesto de ejecución pensado para el límite de respuesta de Alexa.
+- Retención acotada: receipts anti-replay por 15 minutos y logs de diagnóstico por 24 horas.
 
 ## Estructura
 
@@ -30,6 +31,8 @@ docs/                                Arquitectura, configuración y seguridad
 5. Desplegar `alexa-webhook` con verificación JWT desactivada. Alexa no envía JWT de Supabase; la función verifica la firma de Amazon internamente.
 6. Reemplazar `YOUR_PROJECT_REF` en `alexa-skill-package/skill.json`.
 7. Importar o pegar `alexa-skill-package/interactionModels/custom/es-MX.json` y construir el modelo.
+
+La migración de retención habilita Supabase Cron (`pg_cron`) y crea una limpieza diaria. Las solicitudes exitosas sin herramientas no se guardan en `execution_logs`; se conservan solamente errores, timeouts y ejecuciones que utilizaron herramientas.
 
 ```bash
 supabase functions deploy alexa-webhook --no-verify-jwt
